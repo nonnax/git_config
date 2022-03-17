@@ -8,11 +8,11 @@ task :init do
 end
 
 desc 'build git_config.0.0.1.gem'
-task build: %w[init] do
-  sh 'gem build git_config.gemspec'
+task :build do
+  sh "gem build git_config.gemspec"
 end
 
 desc 'installs git_config.0.0.1.gem'
 task install: %w[build] do
-  sh 'sudo gem install git_config.0.0.1.gem'
+  sh "sudo gem install git_config.0.0.1.gem"
 end
