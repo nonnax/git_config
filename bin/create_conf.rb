@@ -7,7 +7,7 @@ config={
   email: 'inonnax@gmail.com',
   https: 'https://github.com/nonnax/',
   ssh: 'git@github.com/nonnax/',
-  password: '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'
+  password: 'xxxx'
 }.transform_keys(&:to_s)
 
-File.write 'git_config.yml', config.to_yaml
+File.write '.git_config.yml', config.to_yaml
