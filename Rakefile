@@ -14,5 +14,5 @@ end
 
 desc 'installs git_config.0.0.1.gem'
 task install: %w[build] do
-  sh "sudo gem install git_config.0.0.1.gem"
+  sh "sudo gem install $(ls git_config-*.gem)"
 end
