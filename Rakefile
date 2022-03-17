@@ -4,7 +4,7 @@ task default: %w[install]
 
 desc 'copies .git_config.yml to home directory'
 task :init do
-  sh 'cp .git_config.yml ~/'
+  sh 'cp .git_config.yml ~/' unless File.exist? File.expand_path('~/.git_config.yml')
 end
 
 desc 'build git_config.0.0.1.gem'
