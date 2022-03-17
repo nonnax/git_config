@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+# Id$ nonnax 2022-03-17 13:37:14 +0800
+require 'git_config/config'
+args = ARGV.map(&:to_sym)
+
+puts Git[*args].values_at(*args).join("\t")
